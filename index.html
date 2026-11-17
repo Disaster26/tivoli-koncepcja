@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Pizzeria Tivoli Poznań - włoska pizza z pieca opalanego drewnem od 1991 r.</title>
+<meta name="description" content="Pizzeria Tivoli w Poznaniu od 1991 roku: pizza z pieca opalanego drewnem grabowym, makarony, zapiekanki i dania z grilla. Lokale: Wilda, Naramowice, os. Lecha, os. Przyjaźni. Zamówienia na wynos i z dowozem.">
+<meta name="theme-color" content="#E2070F">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" as="font" type="font/woff2" href="fonts/roboto-slab-latin-700-normal.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/roboto-latin-400-normal.woff2" crossorigin>
+<style>
+@font-face{font-family:Slab;src:url(fonts/roboto-slab-latin-700-normal.woff2) format("woff2");font-weight:700;font-display:swap;unicode-range:U+0020-007E,U+00A0,U+00A9,U+00AB,U+00B7,U+00BB,U+00D3,U+00F3}
+@font-face{font-family:Slab;src:url(fonts/roboto-slab-latin-ext-700-normal.woff2) format("woff2");font-weight:700;font-display:swap;unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C,U+2013-2014,U+2019,U+201C-201E,U+2026}
+@font-face{font-family:Rob;src:url(fonts/roboto-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap;unicode-range:U+0020-007E,U+00A0,U+00A9,U+00AB,U+00B7,U+00BB,U+00D3,U+00F3}
+@font-face{font-family:Rob;src:url(fonts/roboto-latin-ext-400-normal.woff2) format("woff2");font-weight:400;font-display:swap;unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C,U+2013-2014,U+2019,U+201C-201E,U+2026}
+@font-face{font-family:Rob;src:url(fonts/roboto-latin-500-normal.woff2) format("woff2");font-weight:500;font-display:swap;unicode-range:U+0020-007E,U+00A0,U+00A9,U+00AB,U+00B7,U+00BB,U+00D3,U+00F3}
+@font-face{font-family:Rob;src:url(fonts/roboto-latin-ext-500-normal.woff2) format("woff2");font-weight:500;font-display:swap;unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C,U+2013-2014,U+2019,U+201C-201E,U+2026}
+:root{--red:#E2070F;--red2:#B8050C;--logo:#F40309;--ink:#141414;--ink2:#4A4A4F;--szary:#F2F2F3;--linia:#E1E1E4;--h:68px;--wrap:min(92vw,1680px)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--h);-webkit-text-size-adjust:100%}
+body{margin:0;background:#fff;color:var(--ink);font:400 17px/1.6 Rob,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:Slab,Georgia,serif;font-weight:700;line-height:1.12;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(30px,3.2vw,52px)}
+h3{font-size:clamp(20px,1.5vw,25px)}
+p{margin:0}
+.wrap{width:var(--wrap);margin:0 auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:0 28px;border-radius:4px;background:var(--red);color:#fff;font:500 17px/1 Rob,sans-serif;text-decoration:none;border:2px solid var(--red);cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.btn:hover{background:var(--red2);border-color:var(--red2)}
+.btn.jasny{background:#fff;color:var(--red);border-color:#fff}
+.btn.jasny:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+.btn.obrys{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn.obrys:hover{background:var(--ink);color:#fff}
+/* znak z logo: podwojna skosna kreska */
+.kr{display:inline-block;width:22px;height:20px;flex:none;background:linear-gradient(currentColor,currentColor) 0 0/5px 100% no-repeat,linear-gradient(currentColor,currentColor) 9px 0/5px 100% no-repeat;transform:skewX(-18deg);color:var(--logo)}
+.btn .kr{width:16px;height:16px;background-size:4px 100%,4px 100%;background-position:0 0,7px 0;color:currentColor}
+.kratka{height:28px;background:repeating-conic-gradient(var(--logo) 0 25%,#fff 0 50%) 0 0/28px 28px}
+
+/* naglowek */
+.top{position:sticky;top:0;z-index:50;background:#fff;height:var(--h);border-bottom:1px solid var(--linia)}
+.top .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo img{height:50px;width:auto}
+.menu{display:flex;align-items:center;gap:clamp(14px,1.8vw,34px);list-style:none;margin:0;padding:0}
+.menu a{text-decoration:none;font-weight:500;font-size:16px;padding:8px 0;position:relative;white-space:nowrap}
+.menu a.on{color:var(--red)}
+.menu a.on::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--red)}
+.top .btn{min-height:44px;padding:0 20px;font-size:16px;visibility:hidden;opacity:0;transition:opacity .2s,visibility .2s}
+.top.po .btn{visibility:visible;opacity:1}
+.burger{display:none;width:48px;height:48px;border:0;background:transparent;padding:12px;cursor:pointer;margin-right:-12px}
+.burger span{display:block;height:3px;background:var(--ink);margin:5px 0;transform:skewX(-18deg)}
+.burger span{transition:transform .2s,opacity .2s}.burger[aria-expanded=true] span:nth-child(1){transform:translateY(8px) rotate(45deg)}.burger[aria-expanded=true] span:nth-child(2){opacity:0}.burger[aria-expanded=true] span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+.stopka li+li{margin-top:4px}
+.panel{display:none}
+
+/* pierwszy ekran: obrus */
+.obrus{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:1fr 1fr;height:calc(100svh - var(--h));min-height:600px;max-height:1300px;background:var(--ink)}
+.obrus figure{margin:0;position:relative;overflow:hidden;min-width:0;min-height:0}
+.obrus figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.obrus figure:nth-of-type(n+7){display:none}
+.pole{grid-column:2/4;grid-row:1/3;background:var(--red);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:clamp(32px,4vw,84px);position:relative;overflow:hidden}
+.pole::after{content:"";position:absolute;right:clamp(24px,3vw,56px);top:clamp(24px,3vw,56px);width:clamp(40px,4vw,72px);height:clamp(70px,7vw,130px);background:linear-gradient(#fff,#fff) 0 0/28% 100% no-repeat,linear-gradient(#fff,#fff) 72% 0/28% 100% no-repeat;opacity:.18;transform:skewX(-18deg)}
+.pole .info{font-size:clamp(16px,1.1vw,23px);font-weight:500;margin-bottom:clamp(14px,1.4vw,22px)}
+.pole h1{font-size:clamp(38px,3.9vw,98px);max-width:15ch}
+.pole .lead{font-size:clamp(17px,1.2vw,26px);line-height:1.55;margin-top:clamp(16px,1.6vw,26px);max-width:40ch}
+.pole .akcja{margin-top:clamp(26px,2.4vw,40px);display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px}
+.pole .godz{font-size:15px;line-height:1.45}
+@media (min-width:2200px){:root{--h:84px}.logo img{height:62px}.menu a{font-size:19px}.top .btn{min-height:52px;font-size:18px;padding:0 26px}.pole .btn{min-height:66px;font-size:21px;padding:0 36px}.pole .godz{font-size:18px}body{font-size:19px}.glowa p{font-size:20px}.lokal .adr{font-size:24px}.danie figcaption{font-size:23px}}
+@media (min-width:1600px){.obrus{grid-template-columns:repeat(6,minmax(0,1fr))}.obrus figure:nth-of-type(n+7){display:block}.pole{grid-column:2/4}}
+
+/* sekcje */
+.sek{padding:clamp(64px,7vw,128px) 0}
+.sek.szara{background:var(--szary)}
+.glowa{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px 40px;margin-bottom:clamp(30px,3vw,52px)}
+.glowa p{max-width:62ch;color:var(--ink2);font-size:18px}
+.glowa h2{display:flex;align-items:center;gap:16px}
+
+/* lokale */
+.lokale{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,1.6vw,28px)}
+.lokal{background:#fff;display:flex;flex-direction:column;min-width:0}
+.lokal img{width:100%;aspect-ratio:4/3;object-fit:cover;cursor:zoom-in}
+.lokal .tr{padding:22px 22px 24px;display:flex;flex-direction:column;gap:6px;flex:1}
+.lokal .dz{font-size:15px;color:var(--ink2)}
+.lokal .adr{font-family:Slab,Georgia,serif;font-weight:700;font-size:21px;line-height:1.25;text-decoration:none}
+.lokal .adr:hover{color:var(--red)}
+.lokal .tel{font-size:24px;font-weight:500;text-decoration:none;color:var(--red);margin-top:6px}
+.lokal .tel:hover{text-decoration:underline}
+.lokal .g{font-size:15px;color:var(--ink2);line-height:1.5}
+.lokal .przy{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:16px}
+.lokal .przy .btn{min-height:46px;padding:0 18px;font-size:16px;flex:1 1 auto}
+.wspolne{margin-top:26px;color:var(--ink2);font-size:16px}
+
+/* menu */
+.stol{width:100%;height:clamp(150px,21vw,440px);object-fit:cover;object-position:50% 40%}
+.dania{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(14px,1.4vw,24px)}
+.danie{margin:0;min-width:0}
+.danie img{width:100%;aspect-ratio:1;object-fit:cover;cursor:zoom-in;transition:transform .3s}
+.danie .fot{overflow:hidden}
+.danie:hover img{transform:scale(1.03)}
+.danie figcaption{font-family:Slab,Georgia,serif;font-weight:700;font-size:20px;margin-top:12px;display:flex;align-items:center;gap:10px}
+.menu-dol{display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px;margin-top:clamp(30px,3vw,48px)}
+.menu-dol p{color:var(--ink2);font-size:16px;max-width:60ch;flex:1 1 320px}
+
+/* aperto 1991 */
+.aperto{background:var(--red);color:#fff}
+.aperto .siatka{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(36px,5vw,96px);align-items:start}
+.aperto h2{font-size:clamp(34px,4vw,64px)}
+.aperto .wst{font-size:clamp(18px,1.25vw,21px);margin-top:20px;max-width:56ch}
+.lata{list-style:none;margin:clamp(28px,3vw,44px) 0 0;padding:0;border-top:1px solid rgba(255,255,255,.35)}
+.lata li{display:grid;grid-template-columns:clamp(70px,6vw,100px) minmax(0,1fr);gap:18px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.35);font-size:17px}
+.lata b{font-family:Slab,Georgia,serif;font-size:22px;line-height:1.2}
+.stare{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.stare img{width:100%;aspect-ratio:1;object-fit:cover;cursor:zoom-in}
+.stare img:first-child{grid-column:1/3;aspect-ratio:2/1.15}
+.stare figcaption{grid-column:1/3;font-size:15px;opacity:.9}
+.stare figure{margin:0;display:contents}
+
+/* karol */
+.karol{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(28px,4vw,72px);align-items:center;max-width:1180px}
+.karol img{width:clamp(180px,17vw,280px);aspect-ratio:1;border-radius:50%;object-fit:cover}
+.karol blockquote{margin:0;font-family:Slab,Georgia,serif;font-weight:700;font-size:clamp(22px,2vw,32px);line-height:1.35}
+.karol cite{display:block;margin-top:18px;font:400 17px/1.4 Rob,sans-serif;font-style:normal;color:var(--ink2)}
+.atuty{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,3vw,56px);margin-top:clamp(48px,5vw,88px);padding-top:clamp(32px,3vw,48px);border-top:1px solid var(--linia)}
+.atuty h3{display:flex;gap:12px;align-items:center;margin-bottom:10px}
+.atuty p{color:var(--ink2)}
+
+/* promocje: pola obrusu */
+.promo{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0}
+.promo div{aspect-ratio:1.25;padding:clamp(26px,2.6vw,48px);display:flex;flex-direction:column;justify-content:space-between;min-width:0}
+.promo div:nth-child(1){background:var(--red);color:#fff}
+.promo div:nth-child(2){background:#fff}
+.promo div:nth-child(3){background:var(--ink);color:#fff}
+.promo strong{font-family:Slab,Georgia,serif;font-size:clamp(28px,2.7vw,48px);line-height:1.1;display:block}
+.promo p{font-size:16px;line-height:1.5;margin-top:16px;max-width:36ch}
+.uwaga{margin-top:18px;font-size:15px;color:var(--ink2)}
+
+/* imprezy */
+.dwie{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(36px,4vw,80px)}
+.blok h3{font-size:clamp(26px,2.2vw,36px);margin:22px 0 12px}
+.blok p{color:var(--ink2)}
+.lista{list-style:none;padding:0;margin:16px 0 0}
+.lista li{display:flex;gap:14px;align-items:baseline;padding:7px 0}
+.lista .kr{transform:skewX(-18deg) translateY(3px);width:15px;height:15px;background-size:4px 100%,4px 100%;background-position:0 0,7px 0}
+.pas{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 24px)/3);gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;cursor:grab}
+.pas::-webkit-scrollbar{display:none}
+.pas.ciag{cursor:grabbing;scroll-snap-type:none}
+.pas img{width:100%;aspect-ratio:3/4;object-fit:cover;scroll-snap-align:start;user-select:none;-webkit-user-drag:none;cursor:zoom-in}
+.ceny{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px;margin-top:24px}
+.ceny .kw{font-family:Slab,Georgia,serif;font-size:30px;color:var(--red)}
+.telduzy{margin-top:clamp(40px,4vw,64px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px 32px;padding:clamp(26px,2.4vw,40px);background:var(--szary)}
+.telduzy p{font-size:18px;max-width:58ch}
+
+/* stopka */
+.stopka{background:var(--ink);color:#C9C9CD;font-size:16px}
+.stopka .wrap{display:grid;grid-template-columns:1.3fr 1.4fr 1fr 1fr;gap:36px 48px;padding:clamp(48px,5vw,80px) 0 0}
+.stopka img{height:54px;width:auto}
+.stopka h4{color:#fff;font:700 18px/1.2 Slab,Georgia,serif;margin:0 0 14px}
+.stopka ul{list-style:none;margin:0;padding:0}
+.stopka li{padding:3px 0}
+.stopka a{text-decoration:none}
+.stopka a:hover{color:#fff;text-decoration:underline}
+.stopka .dol{grid-column:1/-1;display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px 30px;align-items:center;border-top:1px solid #2E2E32;padding:22px 0 26px;font-size:15px}
+
+/* pasek dolny tel */
+.mob{display:none}
+
+/* lightbox */
+.lb{position:fixed;inset:0;background:rgba(10,10,10,.94);z-index:100;display:none;align-items:center;justify-content:center;flex-direction:column;padding:56px 12px 20px}
+.lb.otw{display:flex}
+.lb img{max-width:min(94vw,1100px);max-height:80svh;width:auto;height:auto;object-fit:contain}
+.lb p{color:#eee;margin-top:12px;font-size:15px;text-align:center}
+.lb button{position:absolute;background:rgba(255,255,255,.12);color:#fff;border:0;width:52px;height:52px;font-size:28px;line-height:1;cursor:pointer;border-radius:4px}
+.lb .zamk{top:10px;right:10px}
+.lb .pop{left:10px;top:50%;transform:translateY(-50%)}
+.lb .nast{right:10px;top:50%;transform:translateY(-50%)}
+
+@media (max-width:1280px){
+  .menu{gap:18px}.menu a{font-size:15px}
+  .lokale{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stopka .wrap{grid-template-columns:1fr 1fr}
+}
+@media (max-width:1100px){
+  .menu,.top .btn{display:none}
+  .burger{display:block}
+  .panel{display:block;position:fixed;top:var(--h);left:0;right:0;bottom:0;background:#fff;z-index:49;padding:12px 6vw 32px;overflow-y:auto;transform:translateX(100%);transition:transform .25s ease;visibility:hidden}
+  .panel.otw{transform:none;visibility:visible}
+  .panel a.poz{display:flex;align-items:center;gap:14px;font:700 24px/1.3 Slab,Georgia,serif;text-decoration:none;padding:14px 0;border-bottom:1px solid var(--linia)}
+  .panel .btn{width:100%;margin-top:24px}
+  .panel .tele{margin-top:24px;font-size:16px;color:var(--ink2);line-height:1.8}
+  .panel .tele a{color:var(--red);font-weight:500;text-decoration:none}
+  .dania{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .aperto .siatka,.dwie{grid-template-columns:1fr}
+}
+@media (max-width:899px){
+  :root{--h:60px;--wrap:calc(100vw - 40px)}
+  .logo img{height:40px}
+  .obrus{grid-template-columns:1fr 1fr;grid-template-rows:minmax(84px,1fr) auto minmax(84px,1fr);height:auto;min-height:calc(100svh - var(--h));max-height:none}
+  .obrus figure:nth-of-type(n+5){display:none}
+  .pole{grid-column:1/3;grid-row:2;padding:30px 20px 30px}
+  .pole::after{right:20px;top:24px;width:34px;height:58px}
+  .pole .info{font-size:15px;margin-bottom:12px}
+  .pole h1{font-size:clamp(31px,8.6vw,40px);max-width:none}
+  .pole .lead{font-size:16.5px;margin-top:14px;line-height:1.5}
+  .pole .akcja{margin-top:24px;gap:12px 20px}
+  .pole .btn{min-height:50px}
+  .pole .godz{font-size:14px}
+  .sek{padding:56px 0}
+  .glowa p{font-size:16.5px}
+  .lokale,.dania{display:grid;grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -20px;padding:0 20px;scroll-padding:0 20px;gap:14px}
+  .dania{grid-auto-columns:58%}
+  .lokale::-webkit-scrollbar,.dania::-webkit-scrollbar{display:none}
+  .lokal,.danie{scroll-snap-align:start}
+  .lata li{grid-template-columns:64px minmax(0,1fr);gap:12px;font-size:16px}
+  .karol{grid-template-columns:1fr;justify-items:start}
+  .karol img{width:150px}
+  .atuty{grid-template-columns:1fr;gap:26px}
+  .promo{grid-template-columns:1fr}
+  .promo div{aspect-ratio:auto;min-height:220px}
+  .pas{grid-auto-columns:72%}
+  .stopka .wrap{grid-template-columns:1fr 1fr;gap:30px 20px}
+  .stopka .pierw{grid-column:1/-1}
+  .stopka .dol{flex-direction:column;align-items:flex-start}
+  .mob{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40;background:#fff;border-top:1px solid var(--linia);padding:8px 10px calc(8px + env(safe-area-inset-bottom));gap:8px;transform:translateY(110%);transition:transform .2s}
+  .mob.widac{transform:none}
+  .mob .btn{min-height:48px;padding:0 10px;font-size:16px}
+  body{padding-bottom:0}
+}
+@media (max-width:899px) and (max-height:700px){
+  .pole{padding:24px 20px}
+  .pole h1{font-size:clamp(29px,8.2vw,36px)}
+  .pole .lead{font-size:15.5px;margin-top:12px}
+  .pole .akcja{margin-top:24px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+.wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
+.wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
+.wylinka-badge:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.wylinka-badge svg{width:18px;height:18px;flex:none;overflow:visible}
+.wylinka-badge b{font-weight:600}
+.wylinka-badge .wy-old{opacity:.45;transform-origin:40px 30px;transition:transform .32s cubic-bezier(.3,.7,.4,1),opacity .32s ease-out}
+.wylinka-badge .wy-pod{opacity:0;transition:opacity .2s ease-out .08s}
+.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:translate(9px,7px) rotate(9deg);opacity:0}
+.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:1}
+@media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#" aria-label="Pizzeria Tivoli - na górę strony"><img src="img/logo.webp" width="440" height="228" alt="Tivoli Pizza &amp; Pasta"></a>
+    <nav aria-label="Menu główne">
+      <ul class="menu">
+        <li><a href="#" class="on">Start</a></li>
+        <li><a href="#lokale">Lokale</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#o-tivoli">O Tivoli</a></li>
+        <li><a href="#promocje">Promocje</a></li>
+        <li><a href="#imprezy">Imprezy i urodzinki</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+    <a class="btn" href="#lokale">Zamów online</a>
+    <button class="burger" aria-label="Otwórz menu" aria-expanded="false" aria-controls="panel"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="panel" id="panel">
+  <a class="poz" href="#lokale"><span class="kr"></span>Lokale</a>
+  <a class="poz" href="#menu"><span class="kr"></span>Menu</a>
+  <a class="poz" href="#o-tivoli"><span class="kr"></span>O Tivoli</a>
+  <a class="poz" href="#promocje"><span class="kr"></span>Promocje</a>
+  <a class="poz" href="#imprezy"><span class="kr"></span>Imprezy i urodzinki</a>
+  <a class="poz" href="#kontakt"><span class="kr"></span>Kontakt</a>
+  <a class="btn" href="#lokale">Zamów online</a>
+  <p class="tele">Wilda <a href="tel:+48784036799">784 036 799</a><br>Naramowice <a href="tel:+48784036798">784 036 798</a><br>os. Lecha <a href="tel:+48734120919">734 120 919</a><br>os. Przyjaźni <a href="tel:+48606925436">606 925 436</a></p>
+</div>
+
+<main>
+<section class="obrus" aria-label="Pizzeria Tivoli">
+  <div class="pole">
+    <p class="info">Aperto 1991 · Poznań</p>
+    <h1>Włoska pizza z pieca opalanego drewnem</h1>
+    <p class="lead">Od 1991 roku w Poznaniu. Pizza, makarony, zapiekanki da forno i dania z grilla w czterech lokalach: na miejscu, na wynos i z dowozem.</p>
+    <div class="akcja">
+      <a class="btn jasny" id="cta-hero" href="#lokale"><span class="kr"></span>Zamów online</a>
+      <p class="godz">Codziennie od 12:00<br>nd-czw do 22:00, pt-sob do 23:00</p>
+    </div>
+  </div>
+  <figure><img src="img/pizza-600.webp" srcset="img/pizza-360.webp 360w, img/pizza-600.webp 600w" sizes="(max-width:899px) 50vw, 20vw" width="600" height="600" alt="Pizza z burratą, rukolą i pomidorkami" fetchpriority="high"></figure>
+  <figure><img src="img/makaron-600.webp" srcset="img/makaron-360.webp 360w, img/makaron-600.webp 600w" sizes="(max-width:899px) 50vw, 20vw" width="600" height="600" alt="Penne all'arrabbiata na talerzu Tivoli" fetchpriority="high"></figure>
+  <figure><img src="img/panuozzo-600.webp" srcset="img/panuozzo-360.webp 360w, img/panuozzo-600.webp 600w" sizes="(max-width:899px) 50vw, 20vw" width="540" height="540" alt="Panuozzo na obrusie w kratkę"></figure>
+  <figure><img src="img/obiad-600.webp" srcset="img/obiad-360.webp 360w, img/obiad-600.webp 600w" sizes="(max-width:899px) 50vw, 20vw" width="600" height="600" alt="Stek z antrykotu z frytkami"></figure>
+  <figure><img src="img/przystawki-600.webp" srcset="img/przystawki-360.webp 360w, img/przystawki-600.webp 600w" sizes="20vw" width="600" height="600" alt="Krewetki tygrysie z grzankami" loading="lazy"></figure>
+  <figure><img src="img/napoje-600.webp" srcset="img/napoje-360.webp 360w, img/napoje-600.webp 600w" sizes="20vw" width="600" height="600" alt="Aperol spritz na tarasie" loading="lazy"></figure>
+  <figure><img src="img/salatka-600.webp" srcset="img/salatka-360.webp 360w, img/salatka-600.webp 600w" sizes="17vw" width="600" height="600" alt="Sałatka Cezar" loading="lazy"></figure>
+  <figure><img src="img/zupa-600.webp" srcset="img/zupa-360.webp 360w, img/zupa-600.webp 600w" sizes="17vw" width="600" height="600" alt="Zupa gulaszowa" loading="lazy"></figure>
+</section>
+
+<section class="sek szara" id="lokale">
+  <div class="wrap">
+    <div class="glowa">
+      <h2><span class="kr"></span>Wybierz swój lokal</h2>
+      <p>Zamówienie online, telefon i rezerwacja stolika - osobno dla każdego lokalu. Wszystkie są czynne codziennie od 12:00.</p>
+    </div>
+    <div class="lokale">
+      <article class="lokal">
+        <img src="img/czeslawa.webp" data-full="img/czeslawa.webp" data-g="lok" width="500" height="500" alt="Wnętrze Tivoli przy ul. Św. Czesława" loading="lazy">
+        <div class="tr">
+          <span class="dz">Wilda</span>
+          <a class="adr" href="https://www.google.com/maps/search/?api=1&amp;query=Pizzeria+Tivoli+ul.+%C5%9Aw.+Czes%C5%82awa+3+Pozna%C5%84" target="_blank" rel="noopener">ul. Św. Czesława 3</a>
+          <a class="tel" href="tel:+48784036799">784 036 799</a>
+          <span class="g">nd-czw 12:00-22:00<br>pt-sob 12:00-23:00</span>
+          <div class="przy"><a class="btn" href="https://www.pizzeriativoli.pl/zamow-online/" target="_blank" rel="noopener">Zamów online</a><a class="btn obrys" href="https://www.pizzeriativoli.pl/zarezerwuj-stolik/" target="_blank" rel="noopener">Rezerwacja</a></div>
+        </div>
+      </article>
+      <article class="lokal">
+        <img src="img/naramowice.webp" data-full="img/naramowice.webp" data-g="lok" width="500" height="500" alt="Wnętrze Tivoli przy ul. Naramowickiej" loading="lazy">
+        <div class="tr">
+          <span class="dz">Naramowice</span>
+          <a class="adr" href="https://www.google.com/maps/search/?api=1&amp;query=Pizzeria+Tivoli+ul.+Naramowicka+187+Pozna%C5%84" target="_blank" rel="noopener">ul. Naramowicka 187</a>
+          <a class="tel" href="tel:+48784036798">784 036 798</a>
+          <span class="g">nd-czw 12:00-22:00<br>pt-sob 12:00-23:00</span>
+          <div class="przy"><a class="btn" href="https://www.pizzeriativoli.pl/zamow-online/" target="_blank" rel="noopener">Zamów online</a><a class="btn obrys" href="https://www.pizzeriativoli.pl/zarezerwuj-stolik/" target="_blank" rel="noopener">Rezerwacja</a></div>
+        </div>
+      </article>
+      <article class="lokal">
+        <img src="img/lecha.webp" data-full="img/lecha.webp" data-g="lok" width="500" height="500" alt="Wnętrze Tivoli na os. Lecha" loading="lazy">
+        <div class="tr">
+          <span class="dz">Rataje</span>
+          <a class="adr" href="https://www.google.com/maps/search/?api=1&amp;query=Pizzeria+Tivoli+os.+Lecha+121+Pozna%C5%84" target="_blank" rel="noopener">os. Lecha 121</a>
+          <a class="tel" href="tel:+48734120919">734 120 919</a>
+          <span class="g">nd-czw 12:00-22:00<br>pt-sob 12:00-23:00</span>
+          <div class="przy"><a class="btn" href="https://www.pizzeriativoli.pl/zamow-online/" target="_blank" rel="noopener">Zamów online</a><a class="btn obrys" href="https://www.pizzeriativoli.pl/zarezerwuj-stolik/" target="_blank" rel="noopener">Rezerwacja</a></div>
+        </div>
+      </article>
+      <article class="lokal">
+        <img src="img/przyjazni.webp" data-full="img/przyjazni.webp" data-g="lok" width="500" height="500" alt="Wnętrze Tivoli na os. Przyjaźni" loading="lazy">
+        <div class="tr">
+          <span class="dz">Winogrady</span>
+          <a class="adr" href="https://www.google.com/maps/search/?api=1&amp;query=Pizzeria+Tivoli+os.+Przyja%C5%BAni+132C+Pozna%C5%84" target="_blank" rel="noopener">os. Przyjaźni 132 C</a>
+          <a class="tel" href="tel:+48606925436">606 925 436</a>
+          <span class="g">nd-czw 12:00-22:00<br>pt-sob 12:00-23:00</span>
+          <div class="przy"><a class="btn" href="https://www.pizzeriativoli.pl/zamow-online/" target="_blank" rel="noopener">Zamów online</a><a class="btn obrys" href="https://www.pizzeriativoli.pl/zarezerwuj-stolik/" target="_blank" rel="noopener">Rezerwacja</a></div>
+        </div>
+      </article>
+    </div>
+    <p class="wspolne">Realizujemy zamówienia na wynos i z dowozem. Strefy dowozu sprawdzisz w aplikacji zamówień, w zakładce z informacjami.</p>
+  </div>
+</section>
+
+<section id="menu">
+  <img class="stol" src="img/stol-1920.webp" srcset="img/stol-960.webp 960w, img/stol-1920.webp 1920w" sizes="100vw" width="1920" height="500" alt="Pizze, sałatki i wino na obrusie w czerwoną kratkę" loading="lazy">
+  <div class="sek">
+    <div class="wrap">
+      <div class="glowa">
+        <h2><span class="kr"></span>Menu</h2>
+        <p>Pizzę pieczemy w piecu opalanym drewnem grabowym, cenionym przez Włochów. Składniki sprowadzamy z Włoch, warzywa i owoce są sezonowe.</p>
+      </div>
+      <div class="dania">
+        <figure class="danie"><div class="fot"><img src="img/przystawki-360.webp" data-full="img/przystawki-600.webp" data-g="menu" width="360" height="360" alt="Przystawki - krewetki tygrysie" loading="lazy"></div><figcaption>Przystawki</figcaption></figure>
+        <figure class="danie"><div class="fot"><img src="img/zupa-360.webp" data-full="img/zupa-600.webp" data-g="menu" width="360" height="360" alt="Zupy - zupa gulaszowa" loading="lazy"></div><figcaption>Zupy</figcaption></figure>
+        <figure class="danie"><div class="fot"><img src="img/pizza-360.webp" data-full="img/pizza-600.webp" data-g="menu" width="360" height="360" alt="Pizza z burratą" loading="lazy"></div><figcaption>Pizza</figcaption></figure>
+        <figure class="danie"><div class="fot"><img src="img/makaron-360.webp" data-full="img/makaron-600.webp" data-g="menu" width="360" height="360" alt="Makarony - penne all'arrabbiata" loading="lazy"></div><figcaption>Makarony</figcaption></figure>
+        <figure class="danie"><div class="fot"><img src="img/zapiekanka-360.webp" data-full="img/zapiekanka-600.webp" data-g="menu" width="360" height="360" alt="Zapiekanka warzywna da forno" loading="lazy"></div><figcaption>Zapiekanki</figcaption></figure>
+        <figure class="danie"><div class="fot"><img src="img/obiad-360.webp" data-full="img/obiad-600.webp" data-g="menu" width="360" height="360" alt="Dania obiadowe - stek z antrykotu" loading="lazy"></div><figcaption>Dania obiadowe</figcaption></figure>
+        <figure class="danie"><div class="fot"><img src="img/nalesnik-360.webp" data-full="img/nalesnik-600.webp" data-g="menu" width="360" height="360" alt="Naleśnik szpinakowy" loading="lazy"></div><figcaption>Naleśniki</figcaption></figure>
+        <figure class="danie"><div class="fot"><img src="img/salatka-360.webp" data-full="img/salatka-600.webp" data-g="menu" width="360" height="360" alt="Sałatka Cezar" loading="lazy"></div><figcaption>Sałatki</figcaption></figure>
+        <figure class="danie"><div class="fot"><img src="img/panuozzo-360.webp" data-full="img/panuozzo-600.webp" data-g="menu" width="360" height="360" alt="Panuozzo" loading="lazy"></div><figcaption>Panuozzo</figcaption></figure>
+        <figure class="danie"><div class="fot"><img src="img/napoje-360.webp" data-full="img/napoje-600.webp" data-g="menu" width="360" height="360" alt="Napoje - aperol spritz i prosecco" loading="lazy"></div><figcaption>Napoje</figcaption></figure>
+      </div>
+      <div class="menu-dol">
+        <a class="btn" href="#lokale"><span class="kr"></span>Zamów online</a>
+        <p>Pełne menu z cenami i informacją o alergenach do pobrania w PDF: <a href="https://www.pizzeriativoli.pl/wp-content/uploads/2024/04/ulotka.pdf" target="_blank" rel="noopener">menu Tivoli</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sek aperto" id="o-tivoli">
+  <div class="wrap siatka">
+    <div>
+      <h2>Aperto 1991</h2>
+      <p class="wst">W 1991 roku przenieśliśmy słoneczną Italię na ulice Poznania. Pomysł na pizzerię wywodzi się z rodzinnej tradycji, a nazwa z rzymskich ogrodów Tivoli i z ogrodu Tivoli, który w 1856 roku działał w Poznaniu nad Wartą.</p>
+      <ul class="lata">
+        <li><b>1991</b><span>Pierwsza restauracja na ul. Wronieckiej, tuż obok Starego Rynku.</span></li>
+        <li><b>1993</b><span>Tivoli na Wildzie, przy ul. Św. Czesława. Tam stanął pierwszy w Polsce piec do pizzy opalany drewnem.</span></li>
+        <li><b>1994</b><span>Lokal w kinie Apollo i filia w Szklarskiej Porębie.</span></li>
+        <li><b>1998</b><span>Piątkowo, a w kolejnych latach Rataje, Naramowice i ul. Ściegiennego.</span></li>
+        <li><b>Dziś</b><span>Cztery lokale w Poznaniu: Wilda, Naramowice, os. Lecha i os. Przyjaźni.</span></li>
+      </ul>
+    </div>
+    <figure class="stare">
+      <img src="img/hist-piec.webp" data-full="img/hist-piec.webp" data-g="hist" width="700" height="700" alt="Archiwalne zdjęcia Tivoli: piec opalany drewnem i kucharze" loading="lazy">
+      <img src="img/hist-1.webp" data-full="img/hist-1.webp" data-g="hist" width="700" height="700" alt="Archiwalne zdjęcia Tivoli z lat 90." loading="lazy">
+      <img src="img/hist-3.webp" data-full="img/hist-3.webp" data-g="hist" width="700" height="700" alt="Archiwalne zdjęcia zespołu Tivoli" loading="lazy">
+      <figcaption>Zdjęcia z archiwum Tivoli</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="sek">
+  <div class="wrap">
+    <div class="karol">
+      <img src="img/karol.webp" width="400" height="400" alt="Właściciel Pizzerii Tivoli" loading="lazy">
+      <blockquote>„Staram się poświęcać mojej restauracji całe serce i dbać o Wasze podniebienia każdego dnia. Wszystkie dania przygotowywane są ze składników osobiście przeze mnie dobranych. Buon appetito!”<cite>Karol, właściciel Tivoli</cite></blockquote>
+    </div>
+    <div class="atuty">
+      <div><h3><span class="kr"></span>Piec na drewno grabowe</h3><p>Pizzę pieczemy w piecu opalanym drewnem grabowym, cenionym przez Włochów. Stąd jej smak i aromat.</p></div>
+      <div><h3><span class="kr"></span>Składniki z Włoch</h3><p>Dania przygotowujemy zgodnie z włoską tradycją, z naturalnych składników sprowadzanych z Włoch i sezonowych warzyw.</p></div>
+      <div><h3><span class="kr"></span>Rustykalne wnętrza</h3><p>Zapraszamy do lokali urządzonych w ciepłym, rustykalnym stylu, a do domu dowozimy prosto pod drzwi.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sek szara" id="promocje">
+  <div class="wrap">
+    <div class="glowa">
+      <h2><span class="kr"></span>Promocje</h2>
+      <p>Aktualne promocje w lokalach Tivoli.</p>
+    </div>
+    <div class="promo">
+      <div><strong>Do 16:00 drugie danie -50%</strong><p>Rabat naliczany na tańsze danie. Każdego dnia promocja obejmuje inne dania. Nie dotyczy dostaw, szczegóły u obsługi.</p></div>
+      <div><strong>Urodzinowa pizza za 10 zł</strong><p>Promocja obowiązuje w lokalu.</p></div>
+      <div><strong>Karta Dużej Rodziny: karafka wody gratis</strong><p>Promocja obowiązuje w lokalu, przy zamówieniu powyżej 100 zł.</p></div>
+    </div>
+    <p class="uwaga">Promocje nie łączą się.</p>
+  </div>
+</section>
+
+<section class="sek" id="imprezy">
+  <div class="wrap">
+    <div class="glowa">
+      <h2><span class="kr"></span>Imprezy i urodzinki</h2>
+      <p>Urodziny, spotkania rodzinne i firmowe przy długim stole oraz warsztaty pieczenia pizzy dla dzieci i dorosłych.</p>
+    </div>
+    <div class="dwie">
+      <div class="blok">
+        <div class="pas" id="pas-sala">
+          <img src="img/sala2.webp" data-full="img/sala2.webp" data-g="sala" width="600" height="800" alt="Nakryty długi stół na przyjęcie w Tivoli" loading="lazy">
+          <img src="img/sala1.webp" data-full="img/sala1.webp" data-g="sala" width="600" height="800" alt="Sala przygotowana na imprezę okolicznościową" loading="lazy">
+          <img src="img/sala3.webp" data-full="img/sala3.webp" data-g="sala" width="600" height="800" alt="Goście przy stole podczas przyjęcia" loading="lazy">
+          <img src="img/sala4.webp" data-full="img/sala4.webp" data-g="sala" width="600" height="800" alt="Sala Tivoli z nakrytymi stołami" loading="lazy">
+          <img src="img/imprezy-600.webp" data-full="img/imprezy-1000.webp" data-g="sala" width="600" height="800" alt="Stół weselny z kwiatami" loading="lazy">
+        </div>
+        <h3>Imprezy okolicznościowe</h3>
+        <p>Urodziny, imprezy okolicznościowe i spotkania biznesowe dla maksymalnie 40 osób, w lokalach os. Lecha 121 i os. Przyjaźni 132 C.</p>
+        <ul class="lista">
+          <li><span class="kr"></span>Dania z karty albo menu ustalone wcześniej, dopasowane do budżetu</li>
+          <li><span class="kr"></span>Pełna obsługa i dekoracje, także tematyczne</li>
+          <li><span class="kr"></span>Na życzenie zespół grający na żywo</li>
+        </ul>
+      </div>
+      <div class="blok">
+        <div class="pas" id="pas-warsztaty">
+          <img src="img/warsztaty-600.webp" data-full="img/warsztaty-1000.webp" data-g="warsztaty" width="600" height="800" alt="Warsztaty pieczenia pizzy w Tivoli" loading="lazy">
+          <img src="img/spaghetti.webp" data-full="img/spaghetti.webp" data-g="warsztaty" width="700" height="700" alt="Spaghetti i wino w ogródku Tivoli" loading="lazy">
+          <img src="img/sala3.webp" data-full="img/sala3.webp" data-g="warsztaty" width="600" height="800" alt="Goście przy stole w Tivoli" loading="lazy">
+        </div>
+        <h3>Urodzinki i warsztaty pizzy</h3>
+        <p>Zabawa z wypiekaniem pizzy: jak powinno wyglądać idealne ciasto, ile ma odpoczywać i która mąka sprawdza się najlepiej. Dla solenizantów w każdym wieku, na imprezę firmową albo wycieczkę szkolną.</p>
+        <ul class="lista">
+          <li><span class="kr"></span>Grupy od 6 do 25 osób, dzieci w godzinach 12-14, dorośli w ustalonych godzinach</li>
+          <li><span class="kr"></span>W cenie: pizza, fartuszek, czapka kucharska, napój i dyplom</li>
+          <li><span class="kr"></span>Każdy formuje, komponuje i piecze własną pizzę</li>
+        </ul>
+        <div class="ceny"><span class="kw">89 zł</span><span>od osoby, dodatkowy poczęstunek do uzgodnienia</span></div>
+      </div>
+    </div>
+    <div class="telduzy">
+      <p>Termin imprezy albo warsztatów ustalimy przez telefon.</p>
+      <a class="btn" href="tel:+48502606939">Zadzwoń: 502 606 939</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<div class="kratka" aria-hidden="true"></div>
+<footer class="stopka" id="kontakt">
+  <div class="wrap">
+    <div class="pierw">
+      <img src="img/logo-biale.webp" width="440" height="228" alt="Tivoli Pizza &amp; Pasta" loading="lazy">
+      <p style="margin-top:18px">Włoska pizzeria w Poznaniu od 1991 roku.<br><a href="mailto:biuro@pizzeriativoli.pl">biuro@pizzeriativoli.pl</a></p>
+    </div>
+    <div>
+      <h4>Lokale</h4>
+      <ul>
+        <li>ul. Św. Czesława 3<br><a href="tel:+48784036799">784 036 799</a></li>
+        <li>ul. Naramowicka 187<br><a href="tel:+48784036798">784 036 798</a></li>
+        <li>os. Lecha 121<br><a href="tel:+48734120919">734 120 919</a></li>
+        <li>os. Przyjaźni 132 C<br><a href="tel:+48606925436">606 925 436</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Godziny</h4>
+      <ul><li>nd-czw 12:00-22:00</li><li>pt-sob 12:00-23:00</li><li style="margin-top:10px">Imprezy, praca, franczyza:<br><a href="tel:+48502606939">502 606 939</a></li></ul>
+    </div>
+    <div>
+      <h4>Tivoli</h4>
+      <ul>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#promocje">Promocje</a></li>
+        <li><a href="https://www.facebook.com/pizzeriativoli/" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://www.instagram.com/pizzeria_tivoli_poznan/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.tiktok.com/@pizzeria_tivoli_poznan" target="_blank" rel="noopener">TikTok</a></li>
+      </ul>
+    </div>
+    <div class="dol">
+      <span>© 2026 Pizzeria Tivoli · podgląd projektu strony</span>
+      <a class="wylinka-badge" href="https://wylinka.pl/?utm_source=pizzeriativoli.pl&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a>
+    </div>
+  </div>
+</footer>
+
+<div class="mob" id="mob">
+  <a class="btn obrys" href="#menu">Menu</a>
+  <a class="btn" href="#lokale">Zamów online</a>
+</div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie">
+  <button class="zamk" aria-label="Zamknij">×</button>
+  <button class="pop" aria-label="Poprzednie zdjęcie">‹</button>
+  <img alt="">
+  <p></p>
+  <button class="nast" aria-label="Następne zdjęcie">›</button>
+</div>
+<script src="app.js" defer></script>
+</body>
+</html>
